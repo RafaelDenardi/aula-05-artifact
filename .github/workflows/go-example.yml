@@ -16,10 +16,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Build Go artifact for Linux
+    - name: Build for Linux
       run: go build ${{ env.FILE_NAME }}.go
 
-    - name: Build Go artifact for Windows
+    - name: Build for Windows
       run: |
         GOOS=windows GOARCH=amd64 go build ${{ env.FILE_NAME }}.go
 
