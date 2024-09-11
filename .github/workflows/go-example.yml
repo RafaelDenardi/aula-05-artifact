@@ -56,3 +56,17 @@ jobs:
 
       - name: Run Script
         run: ./run.sh
+  download-only-windows:
+    runs-on: windows-latest
+    needs: build-go
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Download Windows artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: windows
+
+     - name: List files in current directory
+        run: dir
