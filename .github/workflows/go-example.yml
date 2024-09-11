@@ -69,5 +69,6 @@ jobs:
         with:
           name: windows
 
-     - name: List files in current directory
-       run: dir
+      - name: List files in current directory
+        run: dir
+
