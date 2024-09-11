@@ -56,6 +56,7 @@ jobs:
 
       - name: Run Script
         run: ./run.sh
+
   download-only-windows:
     runs-on: windows-latest
     needs: build-go
@@ -69,4 +70,4 @@ jobs:
           name: windows
 
      - name: List files in current directory
-        run: dir
+       run: dir
